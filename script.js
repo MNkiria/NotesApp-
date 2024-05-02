@@ -1,3 +1,20 @@
+        // JS for clock
+
+let hrs = document.getElementById("hrs")
+let min = document.getElementById("min")
+let sec = document.getElementById("sec")
+
+setInterval(()=>{
+
+    let localTime = new Date();
+    
+    hrs.innerHTML = (localTime.getHours()<10?"0":"") + localTime.getHours();
+    min.innerHTML = (localTime.getMinutes()<10?"0":"") + localTime.getMinutes();
+    sec.innerHTML = (localTime.getSeconds()<10?"0":"") + localTime.getSeconds();
+
+},1000)
+
+
 // js for the createing text area function
 
 const notesContainer = document.querySelector(".notes-container");
